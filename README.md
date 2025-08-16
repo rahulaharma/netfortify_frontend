@@ -60,4 +60,32 @@ cd netfortify_frontend
 npm install
 ```
 
+## Usage
+
+### 1. Start the development server:
+
+```bash
+npm start
+```
+
+### 2. Open your browser and go to 
+```bash
+http://localhost:1234.
+```
+
+## API Integration
+
+The frontend communicates with a backend server running on http://localhost:8080/api. The following API calls are made:
+
+POST /api/graph/upload: Uploads the network graph file.
+
+POST /api/graph/simulate?strategy={strategy}: Starts the simulation with the selected strategy.
+
+
+## Real-time Updates
+The application uses SockJS and StompJS to establish a WebSocket connection to /ws on the backend server. It subscribes to the /topic/metrics endpoint to receive live simulation data and updates the UI accordingly.
+
+## Author
+Rahul Sharma
+
 
